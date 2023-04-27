@@ -1,0 +1,26 @@
+.flexCenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* background-color: black; */
+}
+
+.appBarBg {
+  background: rgb(238,174,202);
+  background: linear-gradient(342deg, rgba(238,174,202,1) 21%, rgba(148,187,233,1) 100%);
+}
+
+.avatarBg{
+  background: rgb(238,174,202);
+  background: linear-gradient(342deg, rgba(238,174,202,1) 21%, rgba(148,187,233,1) 100%);
+}
+
+a{
+  text-decoration: none;
+}
