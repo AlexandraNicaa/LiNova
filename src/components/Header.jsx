@@ -12,7 +12,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import BookIcon from "@mui/icons-material/Book";
+import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/auth/AuthContext";
 
@@ -25,6 +25,10 @@ const pages = [
     name: "Manage Books",
     path: "/manage",
     auth: true,
+  },
+  {
+    name: "Favorites",
+    path: "/favorite"
   },
 ];
 
@@ -61,7 +65,7 @@ export function Header() {
    
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <BookIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <BookmarksOutlinedIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -134,7 +138,7 @@ export function Header() {
                 ))}
             </Menu>
           </Box>
-          <BookIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <BookmarksOutlinedIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap

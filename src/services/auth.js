@@ -5,7 +5,7 @@ export function login(data) {
         method: "POST",
         body: JSON.stringify(data),
         headers
-    })
+    });
 }
 
 
@@ -14,5 +14,5 @@ export function register(data) {
         method: "POST",
         body: JSON.stringify(data),
         headers
-    })
+    });
 }

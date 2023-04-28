@@ -1,6 +1,7 @@
 import { Box, Container } from "@mui/material";
 import  {Header}  from "../components/Header";
 import { Outlet } from "react-router-dom";
+import { Footer } from "../components/Footer";
 
 export default function AppLayout() {
     return (
@@ -14,6 +15,7 @@ export default function AppLayout() {
             }}>
                 <Outlet/>
             </Container>
+            <Footer/>
         </Box>
     );
 }

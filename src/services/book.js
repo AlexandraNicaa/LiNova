@@ -4,7 +4,7 @@ import { BASE_URL, fetchAndParse, headers } from "./utils";
 export function myBooks() {
     return fetchAndParse(`${BASE_URL}/book/my-books`, {
         headers
-    })
+    });
 }
 
 export function getAllBooks() {
@@ -17,5 +17,13 @@ export function getAllBooks() {
 export function getBookById(id) {
     return fetchAndParse(`${BASE_URL}/book/${id}`, {
         headers
-    })
+    });
+}
+
+export function createBook(data) {
+    return fetchAndParse(`${BASE_URL}/book`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers
+    });
 }
