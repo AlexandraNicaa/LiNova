@@ -40,10 +40,13 @@ export default function FavoriteBook() {
             >
                 <Grid container spacing={3} justifyContent="center">
                     {favoriteBooks.map((book) => (
-                        <Grid key={book.id} item xs={12} sm={6} md={4}>
+                        <Grid key={book.id} align='center' item xs={12} sm={6} md={4}>
                             <BookCard book={book} handleAddToFavorites={() => {}} />
-                            <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => removeBookFromFavorite(book)}>
-                                Remove 
+                            <Button sx={{mt:2}}
+                            variant="outlined" 
+                            aria-label="delete" 
+                            onClick={() => removeBookFromFavorite(book)}>
+                                <DeleteIcon />
                             </Button>
                         </Grid>
                     ))}
