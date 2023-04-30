@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Button, Card, CardContent, CardMedia, Fab, Typography} from "@mui/material";
 import {Link, useNavigate} from "react-router-dom";
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+
 
 export function BookCard({book, handleAddToFavorites}) {
         console.log({book});
@@ -38,7 +38,7 @@ export function BookCard({book, handleAddToFavorites}) {
                 </CardContent>
                 </Link>
                 <CardContent sx={{textAlign: "right", py:"0" }}>
-                    <Fab  sx={{width: "40px", height: "40px", my: "0px"}} aria-label="like" onClick={() => {
+                    <Fab  sx={{width: "40px", height: "40px", my: "0px"}}  onClick={() => {
                         navigateTo("/favorite");
                         handleAddToFavorites(book)
                     }}>
