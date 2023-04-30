@@ -21,9 +21,6 @@ export default function({items}) {
             </Stack>
         </Box>
         )
-
-    
-
 }
 
 

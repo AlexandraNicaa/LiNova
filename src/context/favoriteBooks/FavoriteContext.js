@@ -1,4 +1,4 @@
 
 import { createContext } from "react";
 
-export const FavoriteBooksContext = createContext();
+export const FavoriteContext = createContext();
