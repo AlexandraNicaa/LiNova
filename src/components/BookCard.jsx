@@ -1,7 +1,14 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Typography, Fab } from "@mui/material";
 import { Link } from "react-router-dom";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export function BookCard({ book }) {
+export function BookCard({ book, addBookToFavorite }) {
+
+  const handleAddFavorite = (e) => {
+    e.preventDefault();
+    addBookToFavorite(book);
+  }
+
 
 // book este un obiect(vezi consola), din care iei proprietatiile - book.coverImageURL, book.title, book.author
 
@@ -42,6 +49,11 @@ export function BookCard({ book }) {
             {book.author}
           </Typography>
         </CardContent>
+        <CardContent sx={{textAlign: "right", py:"0" }}>
+                    <Fab  sx={{width: "40px", height: "40px", my: "0px"}} aria-label="like" >
+                        <FavoriteIcon sx={{width: "20px", height: "20px"}} onClick={handleAddFavorite} />
+                    </Fab>
+                </CardContent>
       </Card>
     </Link>
   );
