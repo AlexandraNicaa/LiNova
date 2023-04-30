@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { BookCard } from "../components/BookCard";
 import { useFetchData } from "../hooks/useFetchData";
 import { getAllBooks } from "../services/book";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function () {
   const {
@@ -35,6 +36,7 @@ export default function () {
           </Grid>
         ))}
       </Grid>
+      <ScrollToTop />
     </Box>
   );
 }

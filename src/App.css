@@ -17,7 +17,8 @@
   background: linear-gradient(0deg, rgba(238,174,202,1) 21%, rgba(148,187,233,0.763258819152661) 100%);
 }
 
-.avatarBg{
+.avatarBg,
+.ScrollBtn{
   background: rgb(238,174,202);
   background: linear-gradient(0deg, rgba(238,174,202,1) 21%, rgba(148,187,233,1) 100%);
 }
