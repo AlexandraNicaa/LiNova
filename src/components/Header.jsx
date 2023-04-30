@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -56,6 +56,8 @@ export function Header() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+
 
   return (
     <AppBar 

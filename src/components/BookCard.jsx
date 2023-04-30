@@ -1,12 +1,16 @@
 import * as React from 'react';
-import {Button, Card, CardContent, CardMedia, Fab, Typography} from "@mui/material";
-import {Link, useNavigate} from "react-router-dom";
+import { Card, CardContent, CardMedia, Fab, Typography} from "@mui/material";
+import {Link} from "react-router-dom";
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { FavoriteContext } from '../context/favoriteBooks/FavoriteContext';
+import { useContext } from 'react';
 
 
-export function BookCard({book, handleAddToFavorites}) {
-        console.log({book});
-    const navigateTo = useNavigate();
+export function BookCard({book}) {
+        
+    // const navigateTo = useNavigate();
+    const { addBookToFavorite } = useContext(FavoriteContext);
+
         return (
 
             <Card sx={{ maxWidth: 345 }}>
@@ -39,8 +43,7 @@ export function BookCard({book, handleAddToFavorites}) {
                 </Link>
                 <CardContent sx={{textAlign: "right", py:"0" }}>
                     <Fab  sx={{width: "40px", height: "40px", my: "0px"}}  onClick={() => {
-                        navigateTo("/favorite");
-                        handleAddToFavorites(book)
+                        addBookToFavorite(book);
                     }}>
                         <FavoriteIcon sx={{width: "20px", height: "20px"}} />
                     </Fab>
