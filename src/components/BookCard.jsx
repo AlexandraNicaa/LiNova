@@ -7,8 +7,7 @@ import { useContext } from 'react';
 
 
 export function BookCard({book}) {
-        
-    // const navigateTo = useNavigate();
+
     const { addBookToFavorite } = useContext(FavoriteContext);
 
         return (
@@ -16,7 +15,7 @@ export function BookCard({book}) {
             <Card sx={{ maxWidth: 345 }}>
                 <Link to={`/book/${book.id}`} >
                 <CardMedia
-                    sx={{ height: 400 }}
+                    sx={{ height: 345 }}
                     image={book.coverImageURL}
                     alt={book.title}
                     title={book.title}

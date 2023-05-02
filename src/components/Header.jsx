@@ -58,13 +58,11 @@ export function Header() {
   };
 
 
-
   return (
     <AppBar 
     position="static" 
     className="appBarBg" 
     elevation={10}>
-   
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <BookmarksOutlinedIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -229,12 +227,6 @@ export function Header() {
                   <Typography textAlign="center">Login</Typography>
                 </MenuItem>
               )}
-
-              {/* {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))} */}
             </Menu>
           </Box>
         </Toolbar>
